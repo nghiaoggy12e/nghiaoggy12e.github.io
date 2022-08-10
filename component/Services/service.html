@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeCare</title>
+    <link rel="icon" type="image/x-icon" href="asset/logo/favicon.jpg">
+    <!-- Main CSS + JS -------------------------------------------------->
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/css/Services/service.css">
+    <script src="/js/service.js"></script>
+    <script src="/index.js"></script>
+
+
+    <!-- Bootstrap 5.2 CSS + JS-->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Fontawesome Free JS -->
+    <script src="/node_modules/@fortawesome/fontawesome-free/js/brands.min.js"></script>
+    <script src="/node_modules/@fortawesome/fontawesome-free/js/solid.min.js"></script>
+    <script src="/node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Header---------------------------------------------------------->
+    <section>
+        <header class="sticky-top bg-white w-100">
+            <div class="navbar px-2 mynavbar fixed-top bg-white">
+                <div class="logo">
+                    <a href="/index.html"><img src="/img/Hompage/HRS_Logo_Color.svg"></a>
+                </div>
+                
+                <div class="pos">
+                    <input type="checkbox" class="toggle" id="nav-toggle">
+                    <label for="nav-toggle" id="nav-toggle-label">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </label>
+                    <nav>
+                        <ul class="navbar-nav">
+                            <li class="dropdown">
+                                <button class="dropbtn">
+                                    <h5>About</h5><i class="fa-solid fa-caret-down"></i></button>
+                                <div class="dropdown-content">
+                                    <a href="/component/About/about.html">About</a>
+                                    <a href="/component/About/learntour.html">Lunch and Learn Tour</a>
+                                    <a href="/component/About/news.html">News</a>
+                                    <a href="/component/About/partners.html">Partners</a>
+                                    <a href="/component/About/staff.html">Staff & Board</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">
+                                    <h5>Services</h5><i class="fa-solid fa-caret-down"></i></button>
+                                <div class="dropdown-content">
+                                    <a href="../Services/service.html">Services</a>
+                                    <a href="../Services/home-repair.html">Home Repairs</a>
+                                    <a href="../Services/home-accessibility.html">Home Accessibility</a>
+                                    <a href="../Services/fix-it-school.html">Fix-It-School</a>
+                                    <a href="../Services/remodeling-together.html">Remodeling Together</a>
+                                    <a href="../Services/home-maintenance-check-ups.html">Home Maintenance Check-Ups</a>
+                                    <a href="../Services/housing-counseling-and-education.html">Housing Counseling and Education</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">
+                                    <h5>Events</h5><i class="fa-solid fa-caret-down"></i></button>
+                                <div class="dropdown-content">
+                                    <a href="#">HRS Day</a>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="dropbtn"><a href="./component/contact.html" class="p-0"><h5>Volunteer</h5></a></button>
+                            </li>
+                            <li>
+                                <button class="dropbtn" h><a href="/component/contact.html" class="p-0"><h5>Contact</h5></a></button>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">
+                                    <h5>Give</h5><i class="fa-solid fa-caret-down"></i></button>
+                                <div class="dropdown-content">
+                                    <a href="#">Give</a>
+                                    <a href="#">Gifts & Wills</a>
+                                    <a href="#">Monthly Giving</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button type="button" class="btn btn-success" style="max-height: 38px; display: flex; align-self: center; justify-content: center;" id="mybtn">
+                        <span class="support"> Support Now
+                        </span>
+                    </button>
+                </div>
+                
+            </div>
+        </header>
+    </section>
+
+    <!-- Body------------------------------------------------------------>
+    <section>
+        <!-- Cover Image -->
+        <div class="coverImage mt-0 mt-md-5 pt-0 pt-md-5" style="background-image: url(/asset/img/cover1.jpg);">
+            <div class="triangle">
+                <div class="triangle-content">
+                    <h3 class="triangle-title">You showed me I can do this</h3>
+                </div>
+                <div class="triangle-bgr" style="background: #ffffff"></div>
+                <div class="triangle-bgr-border"></div>
+            </div>
+        </div>
+
+        <!-- Main Body -->
+        <div class="container-fluid">
+            <div class="bodyHeader">
+                <div class="container p-1 p-md-5 text-center">
+                    <h2>Our Services</h2>
+                    <p>Through the generosity of our community, Home Repair Services provides critical repairs,
+                        inspections, accessibility modifications, education, and financial counseling for Kent County
+                        homeowners.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service Selection -->
+        <div class="servicesSelect">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-lg-3 g-1 g-lg-5">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="/asset/img/ss1.jpg" class="card-img-top" alt="" srcset="">
+                            <div class="card-body">
+                                <h2><i class="fa-solid fa-screwdriver-wrench"></i></h2>
+                                <h2>Home Repairs</h2>
+                                <div>
+                                    <p>We offer critical repairs when health or safety are at risk.</p>
+                                    <p><strong><u>General Requirements </u></strong></p>
+                                    <p>Kent County homeowner
+                                        <br>
+                                        Low-moderate income</p>
+                                </div>
+                                <a href="http://">Learn More</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="/asset/img/ss2.jpg" class="card-img-top" alt="" srcset="">
+                            <div class="card-body">
+                                <h2><i class="fa-solid fa-house-chimney"></i></h2>
+                                <h2>Home Accessibility</h2>
+                                <div>
+                                    <p>We offer critical repairs when health or safety are at risk.</p>
+                                    <p><strong><u>General Requirements </u></strong></p>
+                                    <p>Kent County homeowner
+                                        <br>
+                                        Limited mobility
+                                        <br>
+                                        Low-moderate income</p>
+                                </div>
+                                <a href="http://">Learn More</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="/asset/img/ss3.jpg" class="card-img-top" alt="" srcset="">
+                            <div class="card-body">
+                                <h2><i class="fa-solid fa-person-chalkboard"></i></h2>
+                                <h2>Fix It School</h2>
+                                <div>
+                                    <p>We offer free hands-on workshops on various home repair and maintenance topics from basic plumbing to tile installation.</p>
+                                    <p><strong><u>General Requirements </u></strong></p>
+                                    <p>The desire to learn how to do-it-yourself!</p>
+                                </div>
+                                <a href="http://">Learn More</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="/asset/img/ss4.jpg" class="card-img-top" alt="" srcset="">
+                            <div class="card-body">
+                                <h2><i class="fa-solid fa-handshake"></i></h2>
+                                <h2>Remodeling Together</h2>
+                                <div>
+                                    <p>We provide free design service and discounted kitchen materials for your DIY kitchen project.</p>
+                                    <p><strong><u>General Requirements </u></strong></p>
+                                    <p>Kent County homeowner</p>
+                                </div>
+                                <a href="http://">Learn More</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="/asset/img/ss5.jpg" class="card-img-top" alt="" srcset="">
+                            <div class="card-body">
+                                <h2><i class="fa-solid fa-list-check"></i></h2>
+                                <h2>Home Maintenance Check-ups</h2>
+                                <div>
+                                    <p>We offer a free educational inspection service for existing homeowners interested in learning about the health and safety of their home.</p>
+                                    <p><strong><u>General Requirements </u></strong></p>
+                                    <p>Kent County homeowner</p>
+                                </div>
+                                <a href="http://">Learn More</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="/asset/img/ss6.jpg" class="card-img-top" alt="" srcset="">
+                            <div class="card-body">
+                                <h2><i class="fa-solid fa-book-open-reader"></i></h2>
+                                <h2>Housing Counseling & Education</h2>
+                                <div>
+                                    <p>We offer foreclosure prevention counseling, reverse mortgage counseling, and group financial education workshops.</p>
+                                    <p><strong><u>General Requirements </u></strong></p>
+                                    <p>Open to the community</p>
+                                </div>
+                                <a href="http://">Learn More</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="promo container-fluid ">
+            <div class="row row-cols-1 row-cols-md-2">
+                <div class="col promo_info p-5">
+                    <div class="container">
+                        <h1>You can do this</h1>
+                        <p>Do you have time or a talent that you would like to share to further the mission of Home Repair Services? </p>
+                    </div>
+                    <a href="http://" class="ps-5">Volunteer</a>
+                </div>
+                <div class="col promo_img m-0 p-0">
+                    <img src="/asset/img/promo1.jpg" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Footer---------------------------------------------------------->
+    <section>
+        <footer>
+
+        </footer>
+    </section>
+</body>
+
+</html>

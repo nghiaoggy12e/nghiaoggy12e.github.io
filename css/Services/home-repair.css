@@ -1,0 +1,411 @@
+body {
+    font-family: "CocogoosePro", Sans-serif;
+    src: url(../asset/font/Cocogoose\ Pro\ Regular\ Trial.ttf);
+}
+
+/* =========================================================== */
+/* Body */
+/* =========================================================== */
+
+.coverImage {
+    position: relative;
+    min-height: 619px;
+    width: 100%;
+    background-position: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.bodyHeader {
+    color: var(--prime1);
+    padding: 100px 0 100px 0;
+    box-sizing: border-box;
+}
+
+.bodyHeader .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bodyHeader .container h1 {
+    height: 80px;
+    width: 80px;
+    padding: 1rem;
+    color: var(--white);
+    background-color: var(--prime1);
+    border-radius: 10px;
+}
+
+.bodyHeader .container h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.4em;
+    margin-bottom: 1rem !important;
+}
+
+.bodyHeader .container p {
+    text-align: center;
+    color: var(--prime2) !important;
+    overflow-wrap: break-word;
+    font-size: 19px !important;
+    line-height: 1.4em;
+    width: 75%;
+}
+
+
+.incomeValid {
+    background-color: #F5F5F5;
+}
+
+.incomeValid p {
+    padding: 100px 0 100px 0;
+    font-size: 20px;
+    overflow-wrap: break-word;
+}
+
+.incomeValid .row .col {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.incomeValid .form-check {
+    column-gap: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.incomeValid .form-check-input {
+    height: 32px !important;
+    width: 32px !important;
+}
+
+.incomeValid .form-check-input:checked {
+    background-color: var(--prime1) !important;
+    border-color: var(--prime1) !important;
+}
+
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide h3 {
+    color: var(--prime2);
+    line-height: 42px !important;
+    text-align: center;
+    margin: 0 0 30px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.slide .slide-range {
+    width: 100%;
+}
+
+.slide .slide-range .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: var(--white);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border: 1px solid var(--black-light);
+    border-radius: 5px;
+}
+
+.slide .slide-range input[type="range"]::-moz-range-progress {
+    height: 50px;
+    background-color: var(--prime1);
+}
+
+.slide .slide-range input[type="range"]::-moz-range-track {
+    height: 50px;
+    background-color: var(--white);
+}
+
+.rangeSelect {
+    position: relative;
+    height: 25px;
+}
+
+
+.result {
+    color: var(--white);
+    background-color: var(--prime2);
+    border-radius: 10px;
+}
+
+.result p {
+    margin-top: 20px;
+    padding: 0 !important;
+}
+
+.requirement {
+    color: var(--white);
+    background-color: var(--prime1);
+}
+
+.requirement>a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2rem;
+    left: 40%
+}
+
+@media only screen and (max-width: 600px) {
+    .requirement>a {
+        left: 0;
+    }
+
+}
+
+.requirement #requirementCollapse {
+    margin-top: 2rem;
+}
+
+.participating {
+    padding: 50px 0 50px 0;
+    background-color: #F5F5F5;
+    color: white;
+}
+
+.participating a {
+    padding: 1rem;
+    font-size: 19px;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.participating .firstTime {
+
+    border-radius: 20px;
+    /* padding: 4% 4% 4% 4%; */
+    background-color: var(--prime3);
+}
+
+.participating .firstTime>a {
+    background-color: var(--prime2);
+}
+
+.participating .existedClient {
+
+    border-radius: 20px;
+    /* padding: 4% 4% 4% 4%; */
+    background-color: var(--prime4);
+}
+
+.participating .existedClient>a {
+    background-color: var(--prime3);
+}
+
+.participating .senior {
+    border-radius: 20px;
+    /* padding: 4% 4% 4% 4%; */
+    background-color: var(--prime2);
+}
+
+.participating .senior>a {
+    background-color: var(--prime1);
+}
+
+
+#FPC {
+    background-color: var(--prime1);
+}
+
+#RMC{
+    background-color: var(--prime4);
+}
+
+#MMW{
+    background-color: var(--prime2);
+}
+
+#FCCS{
+    background-color: var(--prime1);
+}
+
+#FCCS .container .row .col a:hover{
+    background-color: var(--prime2) !important;
+}
+
+.subject>a {
+    color: var(--white);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+#price{
+    color: var(--prime2);
+    display: inline-block;
+        -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+                animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+
+ @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+
+#video h2{
+    color: var(--prime3);
+} 
+  
+
+
+.promo {
+    box-sizing: border-box;
+}
+
+.promo_info {
+    height: 500px;
+    color: #FFFFFF;
+    background-color: var(--prime3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.promo_info .container h1 {
+    font-weight: 700;
+    line-height: 42px;
+}
+
+.promo_info .container p {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 42px;
+
+}
+
+.promo a {
+    display: inline-block;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    background: var(--prime4);
+    border-radius: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 40px !important;
+    text-decoration: 0;
+    font-size: 20px;
+    font-weight: 700 !important;
+    margin-top: 40px !important;
+    width: fit-content;
+}
+
+.promo_img img {
+    object-fit: cover;
+    object-position: center;
+    height: 500px;
+    width: 100%;
+    border: none;
+    margin: 0 !important;
+}
+
+#impact {
+    padding: 100px 0 100px 0;
+    color: var(--white);
+    background-color: var(--prime2);
+}
+
+#impact .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#impact h1 {
+    height: 80px;
+    width: 80px;
+    padding: 1rem;
+    color: var(--white) !important;
+    background-color: var(--prime1);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+#impact h2 {
+    color: var(--prime1);
+}

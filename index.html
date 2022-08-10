@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeCare</title>
+    <link rel="icon" type="image/x-icon" href="asset/logo/favicon.jpg">
+    <!-- Main CSS + JS -------------------------------------------------->
+    <link rel="stylesheet" href="./index.css">
+
+
+    <!-- Bootstrap 5.2 CSS + JS-->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Fontawesome Free JS -->
+    <script src="./node_modules/@fortawesome/fontawesome-free/js/brands.min.js"></script>
+    <script src="./node_modules/@fortawesome/fontawesome-free/js/solid.min.js"></script>
+    <script src="./node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Donate -->
+    <div id="donate" class="m-0 p-0 d-flex justify-content-center align-items-center btn" data-bs-toggle="modal"
+        data-bs-target="#donateModal" style="background-color: #FFAA00;">
+        <i class="fa-solid fa-heart fa-xl me-3"></i>
+        <h5 class="text-uppercase d-flex align-items-center p-0 m-0" style="color: #FFFFFF; font-size: 1.5rem;">Donate
+        </h5>
+    </div>
+
+    <div id="donateModal" class="modal m-0 p-0" role="dialog" aria-hidden="true" tabindex="-1"
+        data-bs-backdrop="static">
+        <div class="modal-dialog modal-lg modal-dialog-centered text-black">
+            <div class="modal-content">
+                <form action="">
+                    <!-- Modal header -->
+                    <div class="modal-header ps-4 pe-4 pt-3 pb-3">
+                        <a href="/index.html" class="" data-bs-dismiss="modal"><img
+                                src="/img/Hompage/HRS_Logo_Color.svg" style="height:100 ; width: 75px;"></a>
+                        <div class="d-inline-block end-0">
+                            <div class="dropdown">
+                                <a id="donateDropdown" class="text-decoration-none text-secondary"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-bars"></i></a>
+
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="donateDropdown">
+                                    <li>
+                                        <div class="modal-header ps-2 pe-2 pt-1">
+                                            <a class="dropdown-item" href="#">Main menu</a>
+                                        </div>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><span><i
+                                                    class="fa-solid fa-message me-1"></i></span>Contact Us</a></li>
+                                    <li><a class="dropdown-item" href="#"><span><i
+                                                    class="fa-solid fa-circle-question me-1"></i></span> Help Center</a>
+                                    </li>
+                                </ul>
+
+                                <a class="text-secondary" data-bs-toggle="modal" data-bs-target="#loginModal">Login/Register</a>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="loginModal" class="modal m-0 p-0" role="dialog" aria-hidden="true" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered text-black">
+            <div class="modal-content p-1 p-lg-3">
+                <form action="">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal Login Form</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="Username">Username<span class="text-danger">*</span></label>
+                            <input type="text" name="username" class="form-control" id="Username"
+                                placeholder="Enter Username" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Password">Password<span class="text-danger">*</span></label>
+                            <input type="password" name="password" class="form-control" id="Password"
+                                placeholder="Enter Password" required>
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                            <label class="form-check-label" for="remember">Remember Me</label>
+                            <a href="#" class="float-end">Forgot Password</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer pt-4 ">
+                        <button type="button" id="submit" onclick="validate()" data-bs-dismiss="modal"
+                            class="btn btn-success mx-auto w-100 bg-warning text-black" value="Login">Login</button>
+                    </div>
+                    <p class="text-center">Not yet account, <a href="./component/Register.html">Signup</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Welcome -->
+    <div class="welcome">
+        <div class="welcometext">
+            <h3>Welcome to Home Care Services !!</h3>
+        </div>
+    </div>
+    <!-- Header---------------------------------------------------------->
+    <header class="sticky-top bg-white w-100">
+        <div class="navbar px-2 mynavbar">
+            <div class="logo">
+                <a href="/index.html"><img src="/img/Hompage/HRS_Logo_Color.svg"></a>
+            </div>
+
+            <div class="pos">
+                <input type="checkbox" class="toggle" id="nav-toggle">
+                <label for="nav-toggle" id="nav-toggle-label">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </label>
+                <nav>
+                    <ul class="navbar-nav">
+                        <li class="dropdown">
+                            <button class="dropbtn">
+                                <h5>About</h5><i class="fa-solid fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="/component/About/about.html">About</a>
+                                <a href="/component/About/learntour.html">Lunch and Learn Tour</a>
+                                <a href="/component/About/news.html">News</a>
+                                <a href="/component/About/partners.html">Partners</a>
+                                <a href="/component/About/staff.html">Staff & Board</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <button class="dropbtn">
+                                <h5>Services</h5><i class="fa-solid fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="./component/Services/service.html">Services</a>
+                                <a href="./component/Services/home-repair.html">Home Repairs</a>
+                                <a href="./component/Services/home-accessibility.html">Home Accessibility</a>
+                                <a href="./component/Services/fix-it-school.html">Fix-It-School</a>
+                                <a href="./component/Services/remodeling-together.html">Remodeling Together</a>
+                                <a href="./component/Services/home-maintenance-check-ups.html">Home Maintenance
+                                    Check-Ups</a>
+                                <a href="./component/Services/housing-counseling-and-education.html">Housing Counseling
+                                    and Education</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <button class="dropbtn">
+                                <h5>Events</h5><i class="fa-solid fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#">HRS Day</a>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="dropbtn"><a href="./component/contact.html" class="p-0">
+                                    <h5>Volunteer</h5>
+                                </a></button>
+                        </li>
+                        <li>
+                            <button class="dropbtn" h><a href="./component/contact.html" class="p-0">
+                                    <h5>Contact</h5>
+                                </a></button>
+                        </li>
+                        <li class="dropdown">
+                            <button class="dropbtn">
+                                <h5>Give</h5><i class="fa-solid fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#">Give</a>
+                                <a href="#">Gifts & Wills</a>
+                                <a href="#">Monthly Giving</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <button type="button" class="btn btn-success"
+                    style="max-height: 38px; display: flex; align-self: center; justify-content: center;" id="mybtn">
+                    <span class="support"> Support Now
+                    </span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Body------------------------------------------------------------>
+    <section>
+        <!-- Cover Image -->
+        <div class="coverImage" style="background-image: url(./img/Hompage/Home-Header-Edit.jpg);">
+            <div class="triangle">
+                <div class="triangle-content">
+                    <h3 class="triangle-title">You showed me I can do this</h3>
+                </div>
+                <div class="triangle-bgr" style="background: #ffffff"></div>
+                <div class="triangle-bgr-border"></div>
+            </div>
+        </div>
+
+        <!-- Main Body -->
+        <!-- Intro -->
+        <div class="Intercept">
+            <div class="d-flex flex-wrap align-content-start mx-4 p-2">
+                <div class="intro">
+                    <h2 class="intro-title" style="color: #26428E;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea debitis excepturi tempora ipsa
+                        sapiente modi facere, autem fugit odio magnam omnis enim distinctio ut vel quisquam atque dolor
+                        ipsam harum.
+                    </h2>
+                </div>
+                <div class="intro">
+                    <h2 class="intro-title" style="color: #198754;">
+                        So others they can, too.
+                    </h2>
+                </div>
+                <div class="intro">
+                    <button type="button" class="btn btn-success">
+                        <span class="support"> Support Monthly
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Product cards -->
+        <div class="boxalign">
+            <div class="boxpos">
+                <div class="coverImage" style="background-image: url(./img/Hompage/RepairAccess-Edit.jpg);">
+                </div>
+                <div class="infobox" style="background: #F1744F;">
+                    <div class="info-triangle">
+                        <div class="triangle-info-bgr" style="background: #F1744F;"></div>
+                        <div class="triangle-info-bgr-border" style="background: #F1744F;"></div>
+                    </div>
+                    <h3 class="infobox-title">Repair & Access Services</h3>
+                    <div class="infobox-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit labore cum repellendus enim
+                        reiciendis, voluptate provident! Rem hic, fugit, neque quidem, ut similique explicabo earum
+                        optio eum autem porro ratione?
+                    </div>
+                    <button type="button" class="btn btn-success">
+                        <span class="support"> Services
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="boxpos">
+                <div class="coverImage" style="background-image: url(./img/Hompage/HousingCounselingEd.jpg);">
+                </div>
+                <div class="infobox" style="background: #FFAA00;">
+                    <div class="info-triangle">
+                        <div class="triangle-info-bgr" style="background:#FFAA00;"></div>
+                        <div class="triangle-info-bgr-border" style="background: #FFAA00;"></div>
+                    </div>
+                    <h3 class="infobox-title">Housing Counseling & Education</h3>
+                    <div class="infobox-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit labore cum repellendus enim
+                        reiciendis, voluptate provident! Rem hic, fugit, neque quidem, ut similique explicabo earum
+                        optio eum autem porro ratione?
+                    </div>
+                    <button type="button" class="btn btn-success">
+                        <span class="support"> Learn More
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="boxpos">
+                <div class="coverImage" style="background-image: url(./img/Hompage/HomeownerSelfHelp.jpg);">
+                </div>
+                <div class="infobox" style="background: #26428E;">
+                    <div class="info-triangle">
+                        <div class="triangle-info-bgr" style="background: #26428E;"></div>
+                        <div class="triangle-info-bgr-border" style="background:#26428E;"></div>
+                    </div>
+                    <h3 class="infobox-title">Homeowner Self-Help Services</h3>
+                    <div class="infobox-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit labore cum repellendus enim
+                        reiciendis, voluptate provident! Rem hic, fugit, neque quidem, ut similique explicabo earum
+                        optio eum autem porro ratione?
+                    </div>
+                    <button type="button" class="btn btn-success">
+                        <span class="support"> Services
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Change maker -->
+        <div class="py-5 mx-5">
+            <div class="change-maker">
+                <div class="logomaker">
+                    <img src="./img/Hompage/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Change-Makers-1.png">
+                </div>
+                <div class="change-maker-info">
+                    <h2 class="infobox-title" style="padding-bottom: 20px;">Become a Change Maker</h2>
+                    <div class="infobox-content" style="font-size: large;">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit labore cum repellendus enim
+                        reiciendis, voluptate provident! Rem hic, fugit, neque quidem, ut similique explicabo earum
+                        optio eum autem porro ratione?
+                    </div>
+                    <button type="button" class="btn btn-success mt-3">
+                        <span class="support"> Sign up
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Upcoming events -->
+        <div class="py-5 mx-5">
+            <div class="up-events">
+                <div class="d-flex w-100 p-1 flex-wrap justify-content-between" style="max-width: 900px;">
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                        <h2 class="intro-title" style="color: #26428E;">Upcoming events</h2>
+                        <button class="btn btn-lg"
+                            style="background-color: #F1744F; border-radius: 20px 20px 20px 20px;">
+                            <span style="color: #FFFFFF; font-weight: bold;">See all events </span>
+                        </button>
+                    </div>
+                    <div class="w-100 p-3 bg-light mt-2">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Catagory</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <div class="wrapper">
+                            <div class="search-input">
+                                <a href="" target="_blank" hidden></a>
+                                <input class="form-control" id="formFileLg" type="search"
+                                    style="border-bottom-left-radius: 0px; border-top-left-radius: 0px;"
+                                    placeholder="Search for help article...">
+                                <div class="autocom-box">
+                                </div>
+                                <div class="icon"><i class="fa fa-search"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex text-sm-start">No event found!</div>
+                </div>
+                <div class="d-flex w-100 p-1 flex-wrap" style="max-width: 900px;">
+                    <div class="d-flex w-100 justify-content-between align-items-center mb-2">
+                        <h2 class="intro-title" style="color: #26428E;">Register for Services</h2>
+                    </div>
+                    <div class="rounded-4 p-3 w-100 px-5 m-0 d-flex flex-column align-content-start"
+                        style="background-color: #FFAA00;">
+                        <a href="#" class="fw-bold fs-3 lh-lg text-decoration-none text-uppercase"
+                            style="color: #FFFFFF;">Home Repairs</a>
+                        <a href="#" class="fw-bold fs-3 lh-lg text-decoration-none text-uppercase"
+                            style="color: #FFFFFF;">Accessibility Modification</a>
+                        <a href="#" class="fw-bold fs-3 lh-lg text-decoration-none text-uppercase"
+                            style="color: #FFFFFF;">Housing Counseling</a>
+                        <a href="#" class="fw-bold fs-3 lh-lg text-decoration-none text-uppercase"
+                            style="color: #FFFFFF;">Home Inspection</a>
+                        <a href="#" class="fw-bold fs-3 lh-lg text-decoration-none text-uppercase"
+                            style="color: #FFFFFF;">Kitchen Remodeling</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Volunteer -->
+        <div class="volunteer my-4">
+            <div class="volunteer-sort">
+                <div class="volunteer-img">
+                    <img src="./img/Hompage/Page-6-Cabinet-Shop-Volunteers-Option-3.jpg" width="100%" height="100%">
+                </div>
+                <div class="volunteer-content">
+                    <div class="volunteer-triangle">
+                        <div class="volunteer-triangle-bgr"></div>
+                    </div>
+                    <h3 class="volunteer-title">You showed me I can make a difference in our community.</h3>
+                    <button type="button" class="btn btn-success btn-lg my-2"
+                        style="display: flex; justify-content: center;">
+                        <span class="text-uppercase fw-bold text-center" style="color: #FFFFFF;"> Volunteer
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Stay Connect -->
+        <div class="p-5 w-100 stay-c">
+            <h1 class="fw-bold" style="color: rgb(60, 90, 154);">Stay Connected</h1>
+            <div class="col-lg-5 d-flex flex-column align-items-center">
+                <ul class=" list-group list-unstyled fs-1 list-group-horizontal gap-2">
+                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                                class="fa-brands fa-facebook-square fa-2xl" style="color: rgb(60, 90, 154);"></i></a>
+                    </li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">
+                            <i class="fa-brands fa-instagram fa-2xl insta"> </i></a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                                class="fa-brands fa-twitter-square fa-2xl" style="color: #00aced;"></i></a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                                class="fa-brands fa-google-plus-square fa-2xl" style="color: #E34429;"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer---------------------------------------------------------->
+
+
+    <footer class="new_footer_area bg_color">
+        <div class="new_footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-lg-6">
+                        <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
+                            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                            <img src="./img/Hompage/HRS_Logo_White.svg">
+                            <img src="./img/Hompage/charitynavigator_logo_white.svg" width="50%">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mt-2">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s"
+                            style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                            <ul class="list-unstyled f_list">
+                                <li>
+                                    <p>1100 South Division Avenue Grand Rapids, Michigan 49507</p>
+                                </li>
+                                <li>
+                                    <p>(616) 241-2601</p>
+                                </li>
+                                <li>
+                                    <p>info@homerepairservices.org</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Reponsive de phan cho navbar -->
+                    <div class="col-lg-3 col-md-6 mt-2">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s"
+                            style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                            <h3 class="f-title fw-bold">Hours of Operation:</h3>
+                            <ul class="list-unstyled f_list">
+                                <li>
+                                    <p>Monday – Thursday: 9 AM – 5 PM</p>
+                                </li>
+                                <li>
+                                    <p>Friday: 9 AM – 1 PM</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mt-2">
+                        <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s"
+                            style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                            <h3 class="f-title fw-bold w-100" style="color: #FFAA00;">Sign up for our Newletter!</h3>
+                            <button class="btn rounded-4 btn-lg mb-2" style="background-color: #FFAA00;"><a
+                                    href="#">Sign Up</a></button>
+                            <ul class="f_social_icon list-group list-unstyled list-group-horizontal gap-2">
+                                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                                            class="fa-brands fa-facebook-square fa-2xl"
+                                            style="color: rgb(60, 90, 154);"></i></a></li>
+                                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">
+                                        <i class="fa-brands fa-instagram fa-2xl insta"> </i></a></li>
+                                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                                            class="fa-brands fa-twitter-square fa-2xl" style="color: #00aced;"></i></a>
+                                </li>
+                                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                                            class="fa-brands fa-google-plus-square fa-2xl"
+                                            style="color: #E34429;"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-lg-3">
+                        <p class="fw-bolder">© HomeCare Inc.. 2022 All rights reserved.</p>
+                    </div>
+                    <div class="col-lg-3 col-lg-3">
+                        <p>Made with <i class="icon_heart"></i> in <a href="#">HomeCare</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+body {
+    font-family: "CocogoosePro", Sans-serif;
+    src: url(../asset/font/Cocogoose\ Pro\ Regular\ Trial.ttf);
+}
+
+/* =========================================================== */
+/* Body */
+/* =========================================================== */
+
+.coverImage {
+    position: relative;
+    min-height: 619px;
+    width: 100%;
+    background-image: url("../asset/img/cover2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.bodyHeader{
+    color: var(--prime3);
+    padding: 100px 0 100px 0;
+    box-sizing:border-box ;
+}
+.bodyHeader .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bodyHeader .container h2{
+    font-size: 32px;
+    font-weight: 700 ;
+    line-height: 1.4em;
+    margin-bottom: 1rem !important;
+}
+
+.bodyHeader .container p{
+    text-align: center;
+    color: var(--prime2) !important;
+    overflow-wrap: break-word;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.4em;
+    width: 75%;
+}
+
+
+.promo{
+    box-sizing: border-box;
+}
+.promo_info {
+    height: 500px;
+    color: #FFFFFF;
+    background-color: var(--prime3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+} 
+
+.promo_info .container h1{
+    font-weight: 700;
+    line-height: 42px;
+}
+
+.promo_info .container p{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 42px;
+    
+}
+
+.promo a{
+    display: inline-block;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    background: var(--prime4);
+    border-radius: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 40px !important;
+    text-decoration: 0;
+    font-size: 20px;
+    font-weight: 700 !important;
+    margin-top: 40px !important;
+    width: fit-content;
+}
+
+.promo_img img{
+    object-fit: cover;
+    object-position: center;
+    height: 500px;
+    width: 100%;
+    border: none;
+    margin: 0 !important;
+}
