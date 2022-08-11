@@ -12,26 +12,182 @@
     <link rel="stylesheet" href="/css/Services/home-repair.css">
     <script src="/js/service.js"></script>
 
-    <!-- Bootstrap 5.2 CSS + JS-->
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <!-- Fontawesome Free JS -->
-    <script src="/node_modules/@fortawesome/fontawesome-free/js/brands.min.js"></script>
-    <script src="/node_modules/@fortawesome/fontawesome-free/js/solid.min.js"></script>
-    <script src="/node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/brands.min.js" integrity="sha512-helwW+1jTcWdOarbAV4eDgcPQg/WEM20j9oo7HE5caJ8hZXdW0mgYGuxafhlf4j4gYAuOL8WsX1QTy6HUnpWKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/solid.min.js" integrity="sha512-LKdDHe5ZhpmiH6Kd6crBCESKkS6ryNpGRoBjGeh5mM/BW3NRN4WH8pyd7lHgQTTHQm5nhu0M+UQclYQalQzJnw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/fontawesome.min.js" integrity="sha512-TXHaOs+47HgWwY4hUqqeD865VIBRoyQMjI27RmbQVeKb1pH1YTq0sbuHkiUzhVa5z0rRxG8UfzwDjIBYdPDM3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 </head>
 
 <body>
+    <!-- Donate -->
+    <div id="donate" class="m-0 p-0 d-flex justify-content-center align-items-center btn" data-bs-toggle="modal"
+        style="background-color: #FFAA00;" data-bs-target="#donateModal">
+        <a class="d-flex flex-row text-uppercase text-decoration-none" style="color: #FFFFFF;" data-bs-toggle="modal">
+            <i class="fa-solid fa-heart fa-xl me-3"></i><h5 class="text-uppercase d-flex align-items-center"style="color: #FFFFFF;">Donate</h5>
+        </a>
+    </div>
+
+    <div id="donateModal" class="modal m-0 p-0">
+        <div class="modal-dialog modal-lg modal-dialog-centered text-black">
+            <div class="modal-content">
+                <form action="">
+                    <!-- Modal header -->
+                    <div class="modal-header ps-4 pe-4 pt-3 pb-3">
+                        <a href="/index.html" class="" data-bs-dismiss="modal"><img
+                                src="/img/Hompage/HRS_Logo_Color.svg" style="height:100 ; width: 75px;"></a>
+                        <div class="d-inline-block end-0">
+                            <div class="dropdown">
+                                <a id="donateDropdown" class="text-decoration-none text-secondary"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-bars"></i></a>
+
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="donateDropdown">
+                                    <li>
+                                        <div class="modal-header ps-2 pe-2 pt-1">
+                                            <a class="dropdown-item" href="#">Main menu</a>
+                                        </div>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><span><i
+                                                    class="fa-solid fa-message me-1"></i></span>Contact Us</a></li>
+                                    <li><a class="dropdown-item" href="#"><span><i
+                                                    class="fa-solid fa-circle-question me-1"></i></span> Help Center</a>
+                                    </li>
+                                </ul>
+                                <a class="text-secondary" data-bs-toggle="modal" href="#loginModal">Login/Register</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Modal Body -->
+                    <div class="modal-body py-5 mb-5">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item me-1" role="presentation">
+                                <a class="nav-link text-black-50 shadow-sm active  " id="oneTime-tab"
+                                    data-bs-toggle="pill" data-bs-target="#oneTime" type="button" role="tab"
+                                    aria-controls="oneTime">One-Time</a>
+                            </li>
+                            <li class="nav-item me-1" role="presentation">
+                                <a class="nav-link text-black-50 shadow-sm " id="monthly-tab" data-bs-toggle="pill"
+                                    data-bs-target="#monthly" type="button" role="tab" aria-controls="monthly"
+                                    aria-selected="false">Monthly</a>
+                            </li>
+                            <li class="nav-item me-1" role="presentation">
+                                <a class="nav-link text-black-50 shadow-sm " id="roundUps-tab" data-bs-toggle="pill"
+                                    data-bs-target="#roundUps" type="button" role="tab" aria-controls="roundUps"
+                                    aria-selected="false"> Round-Ups</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="oneTime" role="tabpanel"
+                                aria-labelledby="oneTime-tab">
+                                <div class="donate-select d-flex flex-row my-3" style="column-gap: 0.5rem">
+                                    <div class="p-2 shadow-sm">$25</div>
+                                    <div class="p-2 shadow-sm">$50</div>
+                                    <div class="p-2 shadow-sm">$75</div>
+                                    <div class="p-2 shadow-sm">$100</div>
+                                    <div class="p-2 shadow-sm">$200</div>
+                                </div>
+
+                                <div class="checkbox margin-top-5 margin-right-15 my-3"><input type="checkbox"
+                                        id="inhonor">
+                                    <label for="inhonor"><span class="checkbox-icon"></span> I'd like to give
+                                        <a href="#" style="color: var(--prime1)">in honor/memory</a></label>
+                                </div>
+                                <div class="checkbox margin-top-5 margin-right-15 my-3"><input type="checkbox"
+                                        id="inhonor">
+                                    <label for="inhonor"><span class="checkbox-icon"></span> Add a donation
+                                        <a href="#" style="color: var(--prime1)">note/comment</a></label>
+                                </div>
+                                <a class="d-block btn btn-warning text-white p-2 w-50">Donate</a>
+
+                                <div class="powered-by-separator fs-6 text-center w-50"><span>⚡ Powered by
+                                        <a href="https://harnessapp.com/" target="_blank"
+                                            style="font-weight: bold; color: rgb(103, 119, 136);">Harness</a></span>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="monthly" role="tabpanel" aria-labelledby="monthly-tab">
+                                <div class="donate-select d-flex flex-row my-3" style="column-gap: 0.5rem">
+                                    <div class="p-2 shadow-sm">$5</div>
+                                    <div class="p-2 shadow-sm">$10</div>
+                                    <div class="p-2 shadow-sm">$15</div>
+                                    <div class="p-2 shadow-sm">$20</div>
+                                    <div class="p-2 shadow-sm">$25</div>
+                                </div>
+                                <div class="checkbox margin-top-5 margin-right-15 my-3"><input type="checkbox"
+                                        id="inhonor">
+                                    <label for="inhonor"><span class="checkbox-icon"></span> I'd like to give
+                                        <a href="#" style="color: var(--prime1)">in honor/memory</a></label>
+                                </div>
+                                <div class="checkbox margin-top-5 margin-right-15 my-3"><input type="checkbox"
+                                        id="inhonor">
+                                    <label for="inhonor"><span class="checkbox-icon"></span> Add a donation
+                                        <a href="#" style="color: var(--prime1)">note/comment</a></label>
+                                </div>
+                                <a class="d-block btn btn-warning text-white p-2 w-50">Donate</a>
+                                <div class="powered-by-separator fs-6 text-center w-50"><span>⚡ Powered by
+                                        <a href="https://harnessapp.com/" target="_blank"
+                                            style="font-weight: bold; color: rgb(103, 119, 136);">Harness</a></span>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="roundUps" role="tabpanel" aria-labelledby="roundUps-tab">
+                                <img src="/asset/img/roundup.png" alt="" class="w-50 h-50">
+                                <a class="d-block btn btn-warning text-white p-2 w-50">Donate</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal m-0 p-0" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered text-black">
+            <div class="modal-content p-1 p-lg-3">
+                <form action="">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Login</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="Username">Username<span class="text-danger">*</span></label>
+                            <input type="text" name="username" class="form-control" id="Username"
+                                placeholder="Enter Username" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Password">Password<span class="text-danger">*</span></label>
+                            <input type="password" name="password" class="form-control" id="Password"
+                                placeholder="Enter Password" required>
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                            <label class="form-check-label" for="remember">Remember Me</label>
+                            <a href="#" class="float-end">Forgot Password</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer pt-4 ">
+                        <button type="button" id="submit" onclick="validate()" data-bs-dismiss="modal"
+                            class="btn btn-success mx-auto w-100 bg-warning text-black" value="Login">Login</button>
+                    </div>
+                    <p class="text-center">Not yet account, <a href="/component/Register.html">Signup</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Header---------------------------------------------------------->
-    <section>
         <header class="sticky-top bg-white w-100">
-            <div class="navbar px-2 mynavbar fixed-top bg-white">
+            <div class="navbar px-2 mynavbar">
                 <div class="logo">
                     <a href="/index.html"><img src="/img/Hompage/HRS_Logo_Color.svg"></a>
                 </div>
-                
+    
                 <div class="pos">
                     <input type="checkbox" class="toggle" id="nav-toggle">
                     <label for="nav-toggle" id="nav-toggle-label">
@@ -43,7 +199,8 @@
                         <ul class="navbar-nav">
                             <li class="dropdown">
                                 <button class="dropbtn">
-                                    <h5>About</h5><i class="fa-solid fa-caret-down"></i></button>
+                                    <h5>About</h5><i class="fa-solid fa-caret-down"></i>
+                                </button>
                                 <div class="dropdown-content">
                                     <a href="/component/About/about.html">About</a>
                                     <a href="/component/About/learntour.html">Lunch and Learn Tour</a>
@@ -54,55 +211,61 @@
                             </li>
                             <li class="dropdown">
                                 <button class="dropbtn">
-                                    <h5>Services</h5><i class="fa-solid fa-caret-down"></i></button>
+                                    <h5>Services</h5><i class="fa-solid fa-caret-down"></i>
+                                </button>
                                 <div class="dropdown-content">
-                                    <a href="../Services/service.html">Services</a>
-                                    <a href="../Services/home-repair.html">Home Repairs</a>
-                                    <a href="../Services/home-accessibility.html">Home Accessibility</a>
-                                    <a href="../Services/fix-it-school.html">Fix-It-School</a>
-                                    <a href="../Services/remodeling-together.html">Remodeling Together</a>
-                                    <a href="../Services/home-maintenance-check-ups.html">Home Maintenance Check-Ups</a>
-                                    <a href="../Services/housing-counseling-and-education.html">Housing Counseling and Education</a>
-                                </div>
-                            </li>
-                            <li class="dropdown">
-                                <button class="dropbtn">
-                                    <h5>Events</h5><i class="fa-solid fa-caret-down"></i></button>
-                                <div class="dropdown-content">
-                                    <a href="#">HRS Day</a>
+                                    <a href="/component/Services/service.html">Services</a>
+                                    <a href="/component/Services/home-repair.html">Home Repairs</a>
+                                    <a href="/component/Services/home-accessibility.html">Home Accessibility</a>
+                                    <a href="/component/Services/fix-it-school.html">Fix-It-School</a>
+                                    <a href="/component/Services/remodeling-together.html">Remodeling Together</a>
+                                    <a href="/component/Services/home-maintenance-check-ups.html">Home Maintenance
+                                        Check-Ups</a>
+                                    <a href="/component/Services/housing-counseling-and-education.html">Housing Counseling
+                                        and Education</a>
                                 </div>
                             </li>
                             <li>
-                                <button class="dropbtn"><a href="./component/contact.html" class="p-0"><h5>Volunteer</h5></a></button>
+                                <button class="dropbtn"><a href="/component/event.html" class="p-0"></a>
+                                    <h5>Events</h5>
+                                </button>
                             </li>
                             <li>
-                                <button class="dropbtn" h><a href="/component/contact.html" class="p-0"><h5>Contact</h5></a></button>
+                                <button class="dropbtn"><a href="/component/volunteer/volunteer.html" class="p-0">
+                                        <h5>Volunteer</h5>
+                                    </a></button>
+                            </li>
+                            <li>
+                                <button class="dropbtn" h><a href="/component/contact.html" class="p-0">
+                                        <h5>Contact</h5>
+                                    </a></button>
                             </li>
                             <li class="dropdown">
                                 <button class="dropbtn">
-                                    <h5>Give</h5><i class="fa-solid fa-caret-down"></i></button>
+                                    <h5>Give</h5><i class="fa-solid fa-caret-down"></i>
+                                </button>
                                 <div class="dropdown-content">
-                                    <a href="#">Give</a>
-                                    <a href="#">Gifts & Wills</a>
-                                    <a href="#">Monthly Giving</a>
+                                    <a href="/component/give/give.html">Give</a>
+                                    <a href="/component/give/gifts&wills.html">Gifts & Wills</a>
+                                    <a href="/component/give/monthlygiving.html">Monthly Giving</a>
                                 </div>
                             </li>
                         </ul>
                     </nav>
-                    <button type="button" class="btn btn-success" style="max-height: 38px; display: flex; align-self: center; justify-content: center;" id="mybtn">
+                    <button type="button" class="btn btn-success"
+                        style="max-height: 38px; display: flex; align-self: center; justify-content: center;" id="mybtn">
                         <span class="support"> Support Now
                         </span>
                     </button>
                 </div>
-                
+    
             </div>
         </header>
-    </section>
 
     <!-- Body------------------------------------------------------------>
     <section>
         <!-- Cover Image -->
-        <div class="coverImage mt-0 mt-md-5 pt-0 pt-md-5" style="background-image: url(/asset/img/cover7.jpg);background-position: top;">
+        <div class="coverImage" style="background-image: url(/asset/img/cover7.jpg);background-position: top;">
             <div class="triangle">
                 <div class="triangle-content">
                     <h3 class="triangle-title">
@@ -263,11 +426,88 @@
     </section>
 
     <!-- Footer---------------------------------------------------------->
-    <section>
-        <footer>
 
-        </footer>
-    </section>
+
+    <footer class="new_footer_area bg_color">
+        <div class="new_footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-lg-6">
+                        <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
+                            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                            <img src="/img/Hompage/HRS_Logo_White.svg">
+                            <img src="/img/Hompage/charitynavigator_logo_white.svg" width="50%">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mt-2">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s"
+                            style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                            <ul class="list-unstyled f_list">
+                                <li>
+                                    <p>1100 South Division Avenue Grand Rapids, Michigan 49507</p>
+                                </li>
+                                <li>
+                                    <p>(616) 241-2601</p>
+                                </li>
+                                <li>
+                                    <p>info@homerepairservices.org</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Reponsive de phan cho navbar -->
+                    <div class="col-lg-3 col-md-6 mt-2">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s"
+                            style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                            <h3 class="f-title fw-bold">Hours of Operation:</h3>
+                            <ul class="list-unstyled f_list">
+                                <li>
+                                    <p>Monday – Thursday: 9 AM – 5 PM</p>
+                                </li>
+                                <li>
+                                    <p>Friday: 9 AM – 1 PM</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mt-2">
+                        <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s"
+                            style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                            <h3 class="f-title fw-bold w-100" style="color: #FFAA00;">Sign up for our Newletter!</h3>
+                            <button class="btn rounded-4 btn-lg mb-2" style="background-color: #FFAA00;"><a
+                                    href="#">Sign Up</a></button>
+                            <ul class="f_social_icon list-group list-unstyled list-group-horizontal gap-2">
+                                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                                            class="fa-brands fa-facebook-square fa-2xl"
+                                            style="color: rgb(60, 90, 154);"></i></a></li>
+                                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">
+                                        <i class="fa-brands fa-instagram fa-2xl insta"> </i></a></li>
+                                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                                            class="fa-brands fa-twitter-square fa-2xl" style="color: #00aced;"></i></a>
+                                </li>
+                                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                                            class="fa-brands fa-google-plus-square fa-2xl"
+                                            style="color: #E34429;"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-lg-3">
+                        <p class="fw-bolder">© HomeCare Inc.. 2022 All rights reserved.</p>
+                    </div>
+                    <div class="col-lg-3 col-lg-3">
+                        <p>Made with <i class="icon_heart"></i> in <a href="#">HomeCare</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
