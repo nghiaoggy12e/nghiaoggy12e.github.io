@@ -222,6 +222,9 @@ body {
     background-color: var(--prime1);
 }
 
+#result-F{
+    display: none;
+}
 
 #FPC {
     background-color: var(--prime1);
