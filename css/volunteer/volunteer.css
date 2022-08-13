@@ -1,19 +1,22 @@
 .volunteer_intro{
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    box-sizing: border-box;
-    padding: 0px 300px 150px;
-    font-size: 28px;
+    max-width: 870px;
+    margin: auto;
     text-align: center;
+}
+.volunteer_intro p{
+    font-family: 'Roboto', sans-serif;font-size: 19px;color: #26428E;
+    font-weight: 600;
 }
 .ways_container{
     background-color: #f5f5f5;
-    padding: 150px 100px 50px;
+    padding: 100px 100px 50px;
     text-align: center;
 }
+.item-meet{
+    width: 25%;
+}
 .meet-content{
-    font-size: 22px;
+    font-size: 16px;
 }
 .volunteer-triangle{
     bottom: 25%; width: 200px; height: 100px;
@@ -29,4 +32,24 @@
     transform: rotate(45deg) skewX(-5deg) skewY(-5deg); z-index: 0;
     background: #FFAA00;
     box-shadow: 0 0 0 10px rgb(255 255 255 / 50%);
+}
+#nbr1, #nbr2, #nbr3, #nbr4{
+    color: #F1744F; font-size: 3.5rem;
+}
+@media screen and (max-width:1200px){
+    .ways_container{
+        padding: 100px 0;
+    }
+}
+@media screen and (max-width:768px){
+    .about-us{
+        flex-direction: column;
+    }
+    .volunteer-triangle{
+        transform: rotate(180deg);
+        bottom: 100%;
+    }
+    .item-meet{
+        width: 100%;
+    }
 }

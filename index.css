@@ -35,7 +35,7 @@ border-radius: 10px;
 /* Customize the Range Input */
 .btn-success{
     background: #5CB55D !important;
-    padding: 10px 20px;
+    padding: 10px 20px !important;
     text-transform: uppercase;
     border-radius: 00.5rem !important;
 }
@@ -337,6 +337,9 @@ header a:hover {
 @media screen and (max-width: 568px){
     .pos .btn{
         display: none !important;
+    }
+    header nav{
+        width: 100%;
     }
 }
 
