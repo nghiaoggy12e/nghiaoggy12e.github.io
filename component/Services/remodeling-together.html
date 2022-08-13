@@ -10,7 +10,7 @@
     <!-- Main CSS + JS -------------------------------------------------->
     <link rel="stylesheet" href="/index.css">
     <link rel="stylesheet" href="/css/Services/home-repair.css">
-    <script src="/js/service.js"></script>
+    
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -403,17 +403,17 @@
             <div class="container my-5">
                 <div class="row g-3 text-center my-3">
                     <div class="col">
-                        <h2 id="impactNo"> 29 </h2>
+                        <h2 id="impactNo1">29</h2>
                         <p>DIY kitchens completed</p>
                     </div>
 
                     <div class="col">
-                        <h2 id="impactNo"> 16 </h2>
+                        <h2 id="impactNo2">16</h2>
                         <p>Projects assisted by HRS remodeling coach</p>
                     </div>
 
                     <div class="col">
-                        <h2 id="impactNo"> 247 </h2>
+                        <h2 id="impactNo3">247</h2>
                         <p>Kitchens completed since 2011</p>
                     </div>
                 </div>
@@ -508,6 +508,30 @@
             </div>
         </div>
     </footer>
+    <script src="/js/service.js"></script>
+    <script>
+        var speed = 10;
+        function incEltNbr(id) {
+            elt = document.getElementById(id);
+            endNbr = Number(document.getElementById(id).innerHTML);
+            len = String(document.getElementById(id).innerHTML)
+            incNbrRec(0, endNbr, elt, len.length);
+        }
+        function incNbrRec(i, endNbr, elt, d) {
+            if (d>=0)
+            if (i <= endNbr) {
+                elt.innerHTML = i;
+                setTimeout(function() {
+                    incNbrRec(i+ Math.pow(10, d), endNbr, elt, d);
+                }, speed);
+            } else {
+                setTimeout( function(){
+                    incNbrRec(i- Math.pow(10, d), endNbr, elt, d-1)
+                }, speed);
+            }
+        }
+        incEltNbr("impactNo1");incEltNbr("impactNo2");incEltNbr("impactNo3");
+    </script>
 </body>
 
 </html>

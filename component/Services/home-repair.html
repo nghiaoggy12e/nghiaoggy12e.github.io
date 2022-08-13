@@ -441,46 +441,42 @@
             <div class="container my-5">
                 <div class="row g-3 text-center my-3">
                     <div class="col">
-                        <h2  id="impactNo"> 1,525 </h2>
+                        <h2  id="impactNo1">1525</h2>
                         <p>Health & safety jobs completed</p>
                     </div>
 
                     <div class="col">
-                        <h2  id="impactNo">  292 </h2>
+                        <h2  id="impactNo2">292</h2>
                         <p>Furnaces repaired or replaced</p>
                     </div>
 
                     <div class="col">
-                        <h2  id="impactNo">  171  </h2>
+                        <h2  id="impactNo3">171</h2>
                         <p>Roofs repaired or replaced</p>
                     </div>
 
                     <div class="col">
-                        <h2  id="impactNo">  94 </h2>
+                        <h2  id="impactNo4">94</h2>
                         <p>Electrical repairs</p>
                     </div>
                 </div>
 
                 <div class="row g-3 text-center my-3">
                     <div class="col">
-                        <h2  id="impactNo">  33  </h2>
+                        <h2  id="impactNo5">33</h2>
                         <p>Main drain cleanouts</p>
                     </div>
                     <div class="col">
-                        <h2  id="impactNo">  106  </h2>
+                        <h2  id="impactNo6">106</h2>
                         <p>Water heaters repaired or replaced</p>
                     </div>
                     <div class="col">
-                        <h2  id="impactNo">  460  </h2>
+                        <h2  id="impactNo7">460</h2>
                         <p>General plumbing repairs</p>
                     </div>
                 </div>
             </div>
-
-
         </div>
-
-
     </section>
 
     <!-- Footer---------------------------------------------------------->
@@ -568,6 +564,30 @@
     </footer>
 
     <script src="/js/service.js"></script>
+    <script>
+        var speed = 10;
+        function incEltNbr(id) {
+            elt = document.getElementById(id);
+            endNbr = Number(document.getElementById(id).innerHTML);
+            len = String(document.getElementById(id).innerHTML)
+            incNbrRec(0, endNbr, elt, len.length);
+        }
+        function incNbrRec(i, endNbr, elt, d) {
+            if (d>=0)
+            if (i <= endNbr) {
+                elt.innerHTML = i;
+                setTimeout(function() {
+                    incNbrRec(i+ Math.pow(10, d), endNbr, elt, d);
+                }, speed);
+            } else {
+                setTimeout( function(){
+                    incNbrRec(i- Math.pow(10, d), endNbr, elt, d-1)
+                }, speed);
+            }
+        }
+        incEltNbr("impactNo1");incEltNbr("impactNo2");incEltNbr("impactNo3");incEltNbr("impactNo4");
+        incEltNbr("impactNo5");incEltNbr("impactNo6");incEltNbr("impactNo7");
+    </script>
 </body>
 
 </html>

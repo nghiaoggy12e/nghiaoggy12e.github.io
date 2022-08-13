@@ -235,12 +235,10 @@ header a:hover {
 #nav-toggle-label {
     display: none;
     cursor: pointer;
+    z-index: 3 !important;
 }
 #nav-toggle {
     display: none;
-}
-@keyframes mymove{
-    to {right: 0; top: 0;}
 }
 
 @media screen and (max-width: 1230px) {
@@ -261,6 +259,7 @@ header a:hover {
           calc(0% + 3rem / 2));
         box-shadow: -2px 2px 8px 0px rgb(0 0 0 / 80%);
         transition: clip-path 500ms ease-out, background-color 500ms ease-out;
+        z-index: 2;
     }
     header ul {
         grid-auto-flow: row;
@@ -290,7 +289,6 @@ header a:hover {
         linear-gradient(104deg, #00ffc6, rgba(0, 255, 198, 0) 74%);
         background-color: #2b2b2b;
     }
-  
     #nav-toggle-label {
         --size: calc(3rem / 3);
         --bar-height: 2px;

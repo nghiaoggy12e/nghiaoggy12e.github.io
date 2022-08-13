@@ -4,16 +4,19 @@ function incEltNbr(id) {
   elt = document.getElementById(id);
   endNbr = Number(document.getElementById(id).innerHTML);
   len = String(document.getElementById(id).innerHTML)
-  incNbrRec(0, endNbr, elt, Math.pow(10, len.length-2));
-  console.log(Math.pow(10, len.length))
+  incNbrRec(0, endNbr, elt, len.length);
 }
 
-/*A recursive function to increase the number.*/
 function incNbrRec(i, endNbr, elt, d) {
+  if (d>=0)
   if (i <= endNbr) {
     elt.innerHTML = i;
     setTimeout(function() {
-      incNbrRec(i + Math.round(d), endNbr, elt, d);
+      incNbrRec(i+ Math.pow(10, d), endNbr, elt, d);
+    }, speed);
+  } else {
+    setTimeout( function(){
+      incNbrRec(i- Math.pow(10, d), endNbr, elt, d-1)
     }, speed);
   }
 }
