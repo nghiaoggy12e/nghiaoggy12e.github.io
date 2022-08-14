@@ -37,10 +37,37 @@ border-radius: 10px;
     background: #5CB55D !important;
     padding: 10px 20px !important;
     text-transform: uppercase;
-    border-radius: 00.5rem !important;
+    border-radius: 0.5rem !important;
 }
 
-
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .slide .slide-range input {
+        overflow: hidden;
+        height: 30px;
+        -webkit-appearance: none;
+        background-color: var(--white);
+    }
+    .slide .slide-range input::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+        height: 30px;
+        color: var(--prime1);
+    }
+    .slide .slide-range input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 30px;
+        cursor: ew-resize;
+        background: var(--white);
+        color: var(--prime1);
+    }
+    .slide .slide-range input::-moz-range-thumb{
+        width: 30px;
+        height: 30px;
+        background: var(--black-light);
+        border: 2px solid var(--white);
+        cursor: pointer;
+    }
+  
+}
 
 @font-face {font-family:"COCOGOOSE";src:url("/asset/font/Cocogoose_trial.eot") format("eot"),url("/asset/font/Cocogoose_trial.woff") format("woff"),url("/asset/font/Cocogoose_trial.ttf") format("truetype"),url("/asset/font/Cocogoose_trial.svg") format("svg");font-weight:normal;font-style:normal;}
 *{
