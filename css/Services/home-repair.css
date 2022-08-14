@@ -126,15 +126,29 @@ body {
     border-radius: 5px;
 }
 
-.slide .slide-range input[type="range"]::-moz-range-progress {
-    height: 50px;
-    background-color: var(--prime1);
+.slide .slide-range input[type=range]{
+    -webkit-appearance: none !important; 
 }
 
-.slide .slide-range input[type="range"]::-moz-range-track {
-    height: 50px;
-    background-color: var(--white);
-}
+.slide .slide-range input::-webkit-slider-thumb {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background: var(--prime1);
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
+  
+  .slide .slide-range input::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    background: var(--prime1);
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
+
+
+
 
 .rangeSelect {
     position: relative;
